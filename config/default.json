@@ -1,0 +1,18 @@
+{   
+    "roles": {
+        "admin": "admin",
+        "user": "user"
+    },
+    "userStatuses": {
+        "active": "active",
+        "stopped": "stopped"
+    },
+    "btc": {
+        "rpcHost": "http://127.0.0.1:8332/",
+        "rpcUser": "test",
+        "rpcPassword": "test",
+        "hoursToCheck": 8,
+        "minConfirmsNumber": 6,
+        "masterPrivateKey": ""
+    }
+}

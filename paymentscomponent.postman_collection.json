@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "bc2ab1dd-161f-4928-b57f-825d3bcd8ae9",
+		"name": "paymentscomponent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "http://localhost:3000/api/v1/admin/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userName\":\"test\",\n\t\"role\":\"admin\",\n\t\"email\":\"admin@gmail.com\",\n\t\"password\":\"test12345678\",\n\t\"passwordConfirmation\":\"test12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/admin/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/admin/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"admin@gmail.com\",\n\t\"password\":\"test12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "job",
+			"item": [
+				{
+					"name": "cwStatus",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGI3Y2JjNzFhZTY1ZTRiNzA5ZTFiZjMiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTU3MzE1OTgxMCwiZXhwIjoxNTczMjU5ODEwfQ.negexMHnczfX0LMZxFM9Y-ms6vlu6OsFBfrKpI3l088",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/admin/job/checkwallets/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"job",
+								"checkwallets",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cwStop",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGI3Y2JjNzFhZTY1ZTRiNzA5ZTFiZjMiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTU3MzE1OTgxMCwiZXhwIjoxNTczMjU5ODEwfQ.negexMHnczfX0LMZxFM9Y-ms6vlu6OsFBfrKpI3l088"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/admin/job/checkwallets/stop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"job",
+								"checkwallets",
+								"stop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cwStart",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGI3Y2JjNzFhZTY1ZTRiNzA5ZTFiZjMiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTU3MzE1OTgxMCwiZXhwIjoxNTczMjU5ODEwfQ.negexMHnczfX0LMZxFM9Y-ms6vlu6OsFBfrKpI3l088"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/admin/job/checkwallets/start",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"job",
+								"checkwallets",
+								"start"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "btcHdWallet",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGI3Y2JjNzFhZTY1ZTRiNzA5ZTFiZjMiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTU3MzE1OTgxMCwiZXhwIjoxNTczMjU5ODEwfQ.negexMHnczfX0LMZxFM9Y-ms6vlu6OsFBfrKpI3l088"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"externalId\": 1,\n\t\"expectedAmount\": 1,\n\t\"callbackName\": \"test\",\n\t\"callbackArgs\": \"{ \\\"key\\\":\\\"TESTARGS\\\" }\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/admin/btchdwallet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"btchdwallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sethdseed",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGI3Y2JjNzFhZTY1ZTRiNzA5ZTFiZjMiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTU3MzE1OTgxMCwiZXhwIjoxNTczMjU5ODEwfQ.negexMHnczfX0LMZxFM9Y-ms6vlu6OsFBfrKpI3l088",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"newkeypool\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/admin/btchdwallet/setseed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"btchdwallet",
+								"setseed"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
